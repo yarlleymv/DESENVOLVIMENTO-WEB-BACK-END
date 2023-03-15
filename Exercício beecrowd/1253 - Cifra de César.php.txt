@@ -1,0 +1,25 @@
+<?php
+
+function cesarCipher($str, $shift) {
+    $decoded = '';
+    $len = strlen($str);   
+    for ($i = 0; $i < $len; $i++) {       
+        $char = $str[$i];
+        if (ctype_upper($char)) {
+            $newIndex = (ord($char) - 65 + $shift) % 26 + 65;
+            $newChar = chr($newIndex);   
+            $decoded .= $newChar;
+        } else {   
+            $decoded .= $char;
+        }
+    }
+    return $decoded;
+}
+$numCases = intval(fgets(STDIN));
+for ($i = 0; $i < $numCases; $i++) {  
+    $str = trim(fgets(STDIN));
+    $shift = intval(fgets(STDIN));
+    echo caesarCipher($str, $shift) . "\n";
+}
+
+?>

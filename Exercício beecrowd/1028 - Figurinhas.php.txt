@@ -1,0 +1,22 @@
+<?php
+
+$ricardo;
+$vicente;
+$resultado = 0;
+$casos = intval(fgets(STDIN));
+
+while ($casos--)
+{
+    fscanf(STDIN, "%d %d", $ricardo, $vicente);
+
+    while ($vicente != 0)
+    {
+        $resultado = $ricardo % $vicente;
+        $ricardo = $vicente;
+        $vicente = $resultado;
+    }
+
+    echo $ricardo . "\n";
+}
+
+?>
