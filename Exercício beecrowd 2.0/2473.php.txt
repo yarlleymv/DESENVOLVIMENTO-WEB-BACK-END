@@ -1,0 +1,25 @@
+<?php
+
+// Ler a aposta do Flavinho
+$aposta = array_map('intval', explode(' ', readline()));
+
+// Ler os números sorteados
+$sorteio = array_map('intval', explode(' ', readline()));
+
+// Contar quantos números foram acertados
+$acertos = count(array_intersect($aposta, $sorteio));
+
+// Determinar o prêmio com base nos acertos
+if ($acertos == 6) {
+    $premio = 'sena';
+} elseif ($acertos == 5) {
+    $premio = 'quina';
+} elseif ($acertos == 4) {
+    $premio = 'quadra';
+} elseif ($acertos == 3) {
+    $premio = 'terno';
+} else {
+    $premio = 'azar';
+}
+
+echo $premio ;

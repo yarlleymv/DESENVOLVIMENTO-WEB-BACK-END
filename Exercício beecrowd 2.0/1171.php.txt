@@ -1,0 +1,12 @@
+<?php
+$n = intval(readline("digite quantos número você irá inserir \n"));
+
+$numeros = array_map ('intval',explode(' ', fgets(STDIN))); // Lê os valores informados
+
+$frequencia = array_cout_values($numeros); // Conta a frequência de cada valor
+
+ksort($frequencia); // Ordena a frequência
+
+foreach ($frequencia as $numeros => $frequencia) {
+  echo "$numeros aparece $frequencia vez(es) \n";
+}

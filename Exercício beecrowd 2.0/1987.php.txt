@@ -1,0 +1,18 @@
+<?php
+
+while (($line = readline()) !== false) {
+    // Ler a entrada
+    $n = intval($line);
+    $m = intval(readline());
+
+    // Calcular a soma dos algarismos
+    $sum = 0;
+    $digits = str_split($m);
+    foreach ($digits as $digit) {
+        $sum += intval($digit);
+    }
+
+    // Verificar se é divisível por 3 e exibir o resultado
+    $result = $sum % 3 === 0 ? 'sim' : 'nao';
+    echo $sum . PHP_EOL . $result . PHP_EOL;
+}

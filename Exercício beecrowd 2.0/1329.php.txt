@@ -1,0 +1,19 @@
+<?php
+
+$n = intval(readline("Digite o número de vezes que foram jogadas: \n")); 
+While (true) {
+  if ($n == 0) break;
+
+  $maria = 0;
+  $joao = 0;
+
+  $r = explode (" ",(fgets(STDIN)) );
+
+    foreach ($r as $num) {
+      if ($num == 0) $maria++;
+       else $joao++;
+    }
+  
+  echo "Mary won " . $maria . " times and John won " . $joao . " times";
+    break;
+}
