@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";  // nome do servidor
-$username = "root";  // nome de usuário do banco de dados
-$password = "";    // senha do banco de dados
-$database = "gato_net";  // nome do banco de dados
+$servername = "localhost"; 
+$username = "root"; 
+$password = "";   
+$database = "gato_net";  
 
 // Estabelece a conexão com o banco de dados
 $conn = mysqli_connect($servername, $username, $password, $database);
